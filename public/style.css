@@ -1,0 +1,194 @@
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --dark: #292f36;
+  --light: #f7fff7;
+  --accent: #ffd166;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: var(--dark);
+}
+
+.screen {
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #ff5252;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.game-status {
+  padding: 10px 20px;
+  background: var(--accent);
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.cell:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.obstacle {
+  background-color: var(--dark);
+  color: white;
+}
+
+.game-chat {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.chat-messages {
+  height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.message {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+}
+
+.message.player1 {
+  background: var(--primary);
+  color: white;
+  margin-right: auto;
+}
+
+.message.player2 {
+  background: var(--secondary);
+  color: white;
+  margin-left: auto;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+#chat-input {
+  flex: 1;
+}
+
+#reset-btn {
+  background: var(--accent);
+  margin-right: 10px;
+}
+
+#logout-btn {
+  background: var(--dark);
+}
